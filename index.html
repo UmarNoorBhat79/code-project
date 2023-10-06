@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Montez&family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,600&family=Poppins:ital,wght@0,400;1,600&family=Sue+Ellen+Francisco&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 900;
+        display: flex;
+        font-size: 20px;
+        background-color: #d7d9fa;
+        padding: 4px;
+        
+    }
+   
+    nav ul li {
+        list-style: none;
+        margin: 19px 23px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: rgb(15, 24, 54);
+        transition: all;
+        transition-duration: 500ms;
+    }
+
+    nav li a:hover {
+        color: rgb(19, 60, 194);
+    }
+
+    div.logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        font-size: 24px;
+    }
+
+    .container {
+        min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        max-width: 80vw;
+        margin: auto;
+
+    }
+
+    .container h2 {
+        margin: 23px 0;
+        font-size: 19px;
+    }
+
+    .container form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .container form label {
+        font-size: 25px;
+
+    }
+
+    .container form input[type='number'],
+    select,
+    label {
+        font-size: 25px;
+        margin-bottom: 23px;
+        width: 23vw;
+
+
+    }
+
+    .btn {
+        width: 144px;
+        border-radius: 13px;
+        padding: 11px 22px;
+        font-size: 23px;
+        background: #d7d9fa;;
+        color: black;
+        cursor: pointer;
+    }
+
+    .output table{
+        width: 64vw;
+        text-align: center;
+        border: 2px solid black;
+        font-size: 20px;
+    }
+    .output{
+        display: none;
+    }
+
+    .output table th{
+        padding: 3px;
+    }
+
+    @media (max-width: 600px) {
+    body {
+        
+    }
+
+    nav {
+        flex-direction: column;
+        font-size: 14px;
+
+    }
+
+    nav ul li {
+        margin: 5px 13px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 95vw;
+
+    }
+
+    .container form input[type='number'],
+    select,
+    label {
+
+        width: 80vw;
+
+
+    }
+
+}
+
+    footer{
+        font-family: 'Poppins', 'sans-serif';
+        text-align: center;
+
+    }
+
+   
+</style>
+
+<body>
+    <nav>
+
+        <div class="logo">MyCurrencyConverter</div>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+    <div class="container">
+        <h1>Choose a currency to convert</h1>
+        <form action="/action.php" method="get">
+            <label for="quantity">Choose a quantity: </label>
+            <input type="number" name="quantity" min="1" max="10">
+            <label for="currency">Choose a currency: </label>
+            <select name="currency">
+                <option value="INR">Indian Rupee</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+            </select>
+            <button class="btn" type="submit">Submit</button>
+        
+        </form>
+        <div class="output">
+            <h2>Here is your converted values in different currencies</h2>
+            <table>
+                <!-- <caption>Coverted Currency Table</caption> -->
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>Value</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+    <footer>
+        copyright &copy; All rights reserved
+    </footer>
+    <script>
+
+    </script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
